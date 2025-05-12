@@ -1,0 +1,99 @@
+*{
+margin: 0%;
+padding: 0%;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    gap:50px;
+    background-color:rgb(192, 180, 180);
+    padding-bottom: 30px;
+
+    .nav{
+    background-color: chocolate;
+    display: flex;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    gap: 10px;
+    border-bottom: 2px solid brown;
+    box-shadow: 20px 20px 20px grey;
+    height: 70px;
+    align-items: center;
+    justify-content: center;
+
+    i{
+        text-align: center;
+        font-size: 40px;
+        color: rgba(27, 6, 143, 0.788);
+    }
+    h1{
+        font-family: "Creepster", system-ui;
+        font-size: 50px;
+        letter-spacing: 9px;
+        font-weight: 900;
+        text-transform: uppercase;
+        font-style: normal;
+    }
+    }
+
+    .content{
+
+        display: flex;
+        flex-direction: column;
+        gap: 60px;
+        list-style:none;
+        .gitlogo{
+            a{
+                font-size: 40px;
+                width: 150px;
+                color:rgb(204, 117, 117);
+                position: fixed;
+                bottom: 40px;
+                right:0px;
+            }
+        }
+        .teamhead{
+            padding-left: 285px;
+            font-family: "Permanent Marker", cursive;
+            font-size: 30px;
+            text-transform: uppercase;
+            font-weight: 800;
+            font-style: normal;
+            color:brown;
+            
+        }
+        .studentinfo{
+            display: flex;
+            gap: 150px;
+            align-items: center;
+            justify-content: center;
+            .img1{
+                height: 280px;
+                width: 212px;
+                border: 5px solid rgba(228, 213, 200, 0.911);
+                border-radius: 40px;
+            }
+            .vcontent{
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+                #name{
+                font-size: 30px;
+                font-family: 'Times New Roman', Times, serif;
+                }
+                #role{
+                    font-size: 20px;
+                    font-family: 'Times New Roman', Times, serif;
+                    text-transform: capitalize;
+                }
+                #clg{
+                    font-size: 17px;
+                    
+                }
+            }
+            
+        }
+    }
+}
+
