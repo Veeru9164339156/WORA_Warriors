@@ -1,161 +1,189 @@
-*{
-margin: 0%;
-padding: 0%;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-.container{
-    display: flex;
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to right, #e0c3fc, #8ec5fc);
+  color: #222;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  padding-bottom: 30px;
+}
+
+/* Navigation Bar */
+.nav {
+  background: linear-gradient(to right, #ff9966, #ff5e62);
+  display: flex;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  gap: 10px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  height: 70px;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+  padding: 0 10px;
+}
+
+.nav i {
+  font-size: clamp(24px, 4vw, 40px);
+  color: #fff;
+  transition: transform 0.3s ease;
+}
+.nav i:hover {
+  transform: scale(1.2);
+}
+
+.nav h1 {
+  font-family: "Creepster", system-ui;
+  font-size: clamp(30px, 5vw, 50px);
+  letter-spacing: 6px;
+  color: #fff;
+  text-shadow: 2px 2px 4px #000;
+}
+
+/* Content */
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  padding: 20px;
+}
+
+/* GitHub Logo */
+.gitlogo a {
+  font-size: 40px;
+  color: #000;
+  background-color: #fdd835;
+  padding: 10px;
+  border-radius: 50%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+  position: fixed;
+  bottom: 40px;
+  right: 20px;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+}
+.gitlogo a:hover {
+  transform: rotate(15deg) scale(1.1);
+}
+
+/* Team Header */
+.teamhead {
+  text-align: center;
+  font-family: "Permanent Marker", cursive;
+  font-size: clamp(24px, 4vw, 36px);
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #6a1b9a;
+  text-shadow: 1px 1px #fff;
+}
+
+/* Common Student Info Block */
+.studentinfo,
+.studentinfop,
+.studentinfoR {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  padding: 0 20px;
+  background: linear-gradient(145deg, #ffe0b2, #f8bbd0);
+  border-radius: 20px;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+/* Image Styling */
+.img1 {
+  height: auto;
+  width: min(212px, 90%);
+  max-height: 280px;
+  border: 6px solid #fff;
+  border-radius: 40px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+.img1:hover {
+  transform: scale(1.05);
+}
+
+/* Text Content */
+.vcontent {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  text-align: center;
+}
+
+.vcontent #name {
+  font-size: clamp(20px, 3vw, 30px);
+  font-weight: bold;
+  color: #3e2723;
+}
+
+.vcontent #role {
+  font-size: clamp(16px, 2vw, 22px);
+  font-style: italic;
+  color: #bf360c;
+  text-transform: capitalize;
+}
+
+.vcontent #clg {
+  font-size: clamp(14px, 1.5vw, 18px);
+  color: #4e342e;
+}
+
+/* Media Query */
+@media (max-width: 768px) {
+  .nav {
     flex-direction: column;
-    gap:50px;
-    background-color:rgb(192, 180, 180);
-    padding-bottom: 30px;
+    height: auto;
+    padding: 10px;
+  }
 
-    .nav{
-    background-color: chocolate;
-    display: flex;
-    position: sticky;
-    top: 0;
-    width: 100%;
-    gap: 10px;
-    border-bottom: 2px solid brown;
-    box-shadow: 20px 20px 20px grey;
-    height: 70px;
-    align-items: center;
-    justify-content: center;
+  .studentinfo,
+  .studentinfop,
+  .studentinfoR {
+    flex-direction: column;
+    gap: 30px;
+  }
 
-    i{
-        text-align: center;
-        font-size: 40px;
-        color: rgba(27, 6, 143, 0.788);
-    }
-    h1{
-        font-family: "Creepster", system-ui;
-        font-size: 50px;
-        letter-spacing: 9px;
-        font-weight: 900;
-        text-transform: uppercase;
-        font-style: normal;
-    }
-    }
+  .img1 {
+    width: 80%;
+  }
 
-    .content{
-        display: flex;
-        flex-direction: column;
-        gap: 50px;
-        list-style:none;
-        .gitlogo{
-            a{
-                font-size: 40px;
-                width: 150px;
-                color:rgb(204, 117, 117);
-                position: fixed;
-                bottom: 40px;
-                right:0px;
-            }
-        }
-        .teamhead{
-            padding-left: 285px;
-            font-family: "Permanent Marker", cursive;
-            font-size: 30px;
-            text-transform: uppercase;
-            font-weight: 800;
-            font-style: normal;
-            color:brown;
-            
-        }
-        .studentinfoR{
-            display: flex;
-            gap: 150px;
-            align-items: center;
-            justify-content: center;
-            margin-right: 150px;
-            .img1{
-                height: 280px;
-                width: 212px;
-                border: 5px solid rgba(228, 213, 200, 0.911);
-                border-radius: 40px;
-            }
-            .vcontent{
-                display: flex;
-                flex-direction: column;
-                gap: 15px;
-                #name{
-                font-size: 30px;
-                font-family: 'Times New Roman', Times, serif;
-                }
-                #role{
-                    font-size: 20px;
-                    font-family: 'Times New Roman', Times, serif;
-                    text-transform: capitalize;
-                }
-                #clg{
-                    font-size: 17px;
-                    
-                }
-            }
-        }
-
-        .studentinfop{
-            display: flex;
-            gap: 150px;
-            align-items: center;
-            justify-content: center;
-            margin-right: 80px;
-            .img1{
-                height: 280px;
-                width: 212px;
-                border: 5px solid rgba(228, 213, 200, 0.911);
-                border-radius: 40px;
-            }
-            .vcontent{
-                display: flex;
-                flex-direction: column;
-                gap: 15px;
-                #name{
-                font-size: 30px;
-                font-family: 'Times New Roman', Times, serif;
-                }
-                #role{
-                    font-size: 20px;
-                    font-family: 'Times New Roman', Times, serif;
-                    text-transform: capitalize;
-                }
-                #clg{
-                    font-size: 17px;
-                    
-                }
-            }
-        }
-        .studentinfo{
-            display: flex;
-            gap: 150px;
-            align-items: center;
-            justify-content: center;
-            .img1{
-                height: 280px;
-                width: 212px;
-                border: 5px solid rgba(228, 213, 200, 0.911);
-                border-radius: 40px;
-            }
-            .vcontent{
-                display: flex;
-                flex-direction: column;
-                gap: 15px;
-                #name{
-                font-size: 30px;
-                font-family: 'Times New Roman', Times, serif;
-                }
-                #role{
-                    font-size: 20px;
-                    font-family: 'Times New Roman', Times, serif;
-                    text-transform: capitalize;
-                }
-                #clg{
-                    font-size: 17px;
-                    
-                }
-            }
-            
-        }
-    }
+  .gitlogo a {
+    font-size: 32px;
+  }
+}
+.portfolio-link a {
+  display: inline-block;
+  font-size: 22px;
+  padding: 12px 25px;
+  background: linear-gradient(to right, #43cea2, #185a9d);
+  color: white;
+  text-decoration: none;
+  border-radius: 30px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  font-weight: bold;
+  transition: all 0.3s ease-in-out;
 }
 
+.portfolio-link a:hover {
+  transform: scale(1.1) rotate(-1deg);
+  background: linear-gradient(to right, #ff512f, #dd2476);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
+  text-shadow: 1px 1px #000;
+}
