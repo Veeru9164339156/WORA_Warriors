@@ -164,7 +164,7 @@ body {
     width: 80%;
   }
 
-<<<<<<< HEAD
+
   .gitlogo a {
     font-size: 32px;
   }
@@ -180,7 +180,7 @@ body {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
   font-weight: bold;
   transition: all 0.3s ease-in-out;
-=======
+
     .content{
 
         display: flex;
@@ -239,7 +239,7 @@ body {
             
         }
     }
->>>>>>> 7da50b3ec8bdab4cdc0484e9c8324c7e605d28bc
+
 }
 
 .portfolio-link a:hover {
